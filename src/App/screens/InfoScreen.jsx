@@ -1,0 +1,64 @@
+import { StyleSheet, Text, View } from "react-native";
+
+const COLOR_TITLE = "#2C4A8C";
+
+export default function InfoScreen() {
+    return(
+        <View style={styles.container}>
+
+            <View>
+                <Text style={styles.title}>
+                    Quem somos?
+                </Text>
+                
+                <Text style={styles.text}>
+                    Somos uma empresa especializada no desenvolvimento de soluções tecnológicas para gestão de estoque.
+                </Text>
+                
+                <Text style={styles.text}>
+                    Nosso objetivo é ajudar empresas aorganizar, controlar e otimizar seus produtos de forma simples, eficiente esegura.
+                </Text>
+            </View>
+
+            <View>
+                <Text style={styles.title}>
+                    Suporte e Atendimento
+                </Text>
+
+                <Text style={styles.text}>
+                    Precisa de ajuda com o sistema?
+                </Text>
+
+                <Text>
+                    Telefone
+                    (21) 3000-0000
+                    WhatsApp
+                    (21) 98888-0000
+                </Text>
+
+                <Text style={styles.text}>
+                    Nossa equipe está pronta para atendervocê e esclarecer suas dúvidas.
+                </Text>
+
+            </View>
+
+        </View>
+    )
+}
+
+const styles = StyleSheet.create({
+    title:{
+        color: COLOR_TITLE,
+        fontSize: 20,
+        fontWeight: 600,
+        marginTop: 10,
+    }, 
+    text:{
+        fontSize:18,
+        marginTop: 10,
+    },
+    container:{
+        flex: 1,
+        marginTop: 180,
+    },
+})
