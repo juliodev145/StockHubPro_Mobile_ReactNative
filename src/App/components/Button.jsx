@@ -1,12 +1,14 @@
 import { Pressable, Text, StyleSheet } from "react-native";
 
-const BG_BUTTON = '#3CA7FF';
-const TEXT_PRIMARY = '#FFFFFF';
+const BG_BUTTON = "#0045C4";
+const TEXT_PRIMARY = "#FFFFFF";
 
-export default function Button({    //props - properties 
+export default function Button({
     textButton = "Entrar",
     backgroundColor = BG_BUTTON,
     textColor = TEXT_PRIMARY,
+    borderColor = BG_BUTTON,
+    borderWidth = 0,
     borderRadius = 20,
     onPress
 }) {
@@ -16,6 +18,8 @@ export default function Button({    //props - properties
                 styles.button,
                 {
                     backgroundColor: backgroundColor,
+                    borderColor: borderColor,
+                    borderWidth: borderWidth,
                     borderRadius: borderRadius
                 }
             ]}
@@ -30,13 +34,14 @@ export default function Button({    //props - properties
 
 const styles = StyleSheet.create({
     button: {
-        marginHorizontal: 20,
+        marginHorizontal: 25,
         marginVertical: 10,
     },
 
     title: {
         textAlign: "center",
-        marginVertical: 2,
-        paddingVertical: 7,
+        paddingVertical: 10,
+        fontSize: 20,
+        fontWeight: "500",
     }
 });
