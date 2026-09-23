@@ -17,6 +17,7 @@ export default function InfoScreen() {
                     <Text style={styles.title}>
                         Quem somos?
                     </Text>
+
                 
                     <Text style={styles.text}>
                         Somos uma empresa especializada no desenvolvimento de soluções tecnológicas para gestão de estoque.
