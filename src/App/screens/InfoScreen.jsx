@@ -1,10 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
+import Header from "../components/Header";
 
 const COLOR_TITLE = "#2C4A8C";
 
 export default function InfoScreen() {
     return(
         <View style={styles.container}>
+
+
+            <Header/>
 
             <View>
                 <Text style={styles.title}>

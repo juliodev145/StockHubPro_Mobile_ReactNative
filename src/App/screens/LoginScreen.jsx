@@ -1,4 +1,3 @@
-// Componente de tela
 import { View, Text, StyleSheet, TextInput } from "react-native";
 import Button from "../components/Button"
 
