@@ -6,6 +6,8 @@ import { StatusBar } from "react-native";
 const INPUT_BORDER = "#0045C4";
 const LINK_COLOR = "#003CFF";
 
+
+//a
 const BG_COLOR = "#0045C4";
 
 export default function LoginScreen() {
