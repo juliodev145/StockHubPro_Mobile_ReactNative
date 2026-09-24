@@ -15,7 +15,7 @@ export default function Header() {
                 translucent={false}         //statusbar transparente
             />
 
-            <SafeAreaView edges={["top"]}>
+            <SafeAreaView edges={"bottom"}>
                 <View style={styles.content}>
 
                     <Text style={styles.title}>
