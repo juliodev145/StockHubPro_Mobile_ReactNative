@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View, Text, StyleSheet} from "react-native";
 import Button from "../components/Button"
 import LabeledInput from "../components/LabeledInput";
 import { StatusBar } from "react-native";
@@ -53,6 +53,8 @@ export default function LoginScreen() {
         borderColor="#0045C4"
         borderWidth={1}
       />
+
+
 
       <Text style={styles.link}>
         Esqueci minha senha

@@ -2,9 +2,8 @@ import { StyleSheet, Text, TextInput, View } from "react-native";
 
 const INPUT_BG = "#f5f5f5";
 const INPUT_BORDER = "#0045C4";
-const LABEL_COLOR = "#000000";
 
-export default function LabeledInput({label, placeholder}){
+export default function LabeledInput({ placeholder}){
     return(
         <View style={styles.container}>
 
