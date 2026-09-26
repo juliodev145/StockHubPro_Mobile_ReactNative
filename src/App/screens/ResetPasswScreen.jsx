@@ -31,7 +31,7 @@ export default function ResetPasswScreen () {
     </View>
 
              <LabeledInput
-               placeholder= "Insira seu código"
+               placeholder= "Insira seu código "
               />
 
               <LabeledInput
@@ -45,14 +45,18 @@ export default function ResetPasswScreen () {
                 <Button
                  textButton="Redefinir"
                               />
-                 <Button
-                 textButton="Fazer login"
-                              />
+               <Button
+               textButton="Fazer login"
+               backgroundColor="#FFFFFF"
+               textColor="#0045C4"
+               borderColor="#0045C4"
+                borderWidth={1}
+              />
 
-
+              
     </View>
 
-
+     
 
     </View>
 
