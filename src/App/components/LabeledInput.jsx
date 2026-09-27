@@ -1,34 +1,62 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { useState } from "react";
+import { StyleSheet, TextInput, View, TouchableOpacity } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
-const INPUT_BG = "#f5f5f5";
+const INPUT_BG = "#F5F5F5";
 const INPUT_BORDER = "#0045C4";
+const ICON_COLOR = "#585858";
 
-export default function LabeledInput({ placeholder}){
-    return(
-        <View style={styles.container}>
+export default function LabeledInput({ placeholder, icon, isPassword }) {
+  const [hidden, setHidden] = useState(true);
 
-            <TextInput 
-                style={styles.input}
-                placeholderTextColor="#B5B5B5"
-                placeholder={placeholder}
+  return (
+    <View style={styles.container}>
+      <View style={styles.inputBox}>
+        {icon && (
+          <Ionicons name={icon} size={20} color={ICON_COLOR} style={styles.iconLeft} />
+        )}
+
+        <TextInput
+          style={styles.input}
+          placeholderTextColor="#858585"
+          placeholder={placeholder}
+          secureTextEntry={isPassword && hidden}
+        />
+
+        {isPassword && (
+          <TouchableOpacity onPress={() => setHidden(!hidden)}>
+            <Ionicons
+              name={hidden ? "eye-off-outline" : "eye-outline"}
+              size={20}
+              color={ICON_COLOR}
             />
-
-        </View>
-    )
+          </TouchableOpacity>
+        )}
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container:{
-        marginHorizontal: 25,
-        marginTop: 10,
-    },
-    input:{
-        backgroundColor: INPUT_BG,
-        borderRadius: 10,
-        borderColor: INPUT_BORDER,
-        borderWidth: 1,
-        paddingVertical: 10,
-        paddingHorizontal: 15,
-        fontSize: 16,
-    },
-})
+  container: {
+    marginHorizontal: 25,
+    marginTop: 10,
+  },
+  inputBox: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: INPUT_BG,
+    borderRadius: 10,
+    borderColor: INPUT_BORDER,
+    borderWidth: 1,
+    paddingHorizontal: 15,
+  },
+  iconLeft: {
+    marginRight: 8,
+  },
+  input: {
+    flex: 1,
+    paddingVertical: 10,
+    fontSize: 16,
+  },
+});

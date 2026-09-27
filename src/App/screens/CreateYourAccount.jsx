@@ -19,9 +19,9 @@ export default function CreateYourAccount() {
         <Text style={styles.title}>Crie sua conta</Text>
 
         <LabeledInput placeholder="Nome" />
-        <LabeledInput placeholder="E-mail" />
-        <LabeledInput placeholder="Senha" />
-        <LabeledInput placeholder="Repita sua senha" />
+        <LabeledInput placeholder="E-mail" icon="mail-outline" />
+        <LabeledInput placeholder="Senha" isPassword/>
+        <LabeledInput placeholder="Repita sua senha" isPassword />
         <LabeledInput placeholder="Nome da empresa" />
         <LabeledInput placeholder="CNPJ" />
         <LabeledInput placeholder="CEP" />
