@@ -10,9 +10,6 @@ export default function ScannerScreen() {
       <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF" />
 
       <View style={styles.card}>
-        <TouchableOpacity style={styles.backButton}>
-          <Ionicons name="arrow-back" size={26} color="#000000" />
-        </TouchableOpacity>
 
         <Text style={styles.title}>Escanear código de barras</Text>
         <Text style={styles.subtitle}>Aponte a câmera para o código</Text>

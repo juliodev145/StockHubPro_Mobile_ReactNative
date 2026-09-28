@@ -27,6 +27,7 @@ export default function ForgotPasswScreen(){
 
                 <LabeledInput
                     placeholder= "Digite seu email"
+                    icon="mail-outline"
                 />
                 <Button
                     textButton="Continuar"

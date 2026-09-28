@@ -8,7 +8,7 @@ import SideMenu from "../components/SideMenu";
 const TEXT_COLOR = "#0045C4";
 
 export default function HomeScreen() {
-  const [menuVisible, setMenuVisible] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);  //menu inicia "não visível"
 
   return (
     <SafeAreaView style={styles.container} edges={["top"]}>
@@ -22,6 +22,7 @@ export default function HomeScreen() {
           <Text style={styles.greeting}>Olá, usuário!</Text>
 
           <View style={styles.card}>
+
             <View style={styles.box}>
               <Text style={styles.boxLabel}>Total de item(s)</Text>
               <Text style={styles.boxValue}>125</Text>
@@ -46,8 +47,8 @@ export default function HomeScreen() {
 
         <SideMenu visible={menuVisible} onClose={() => setMenuVisible(false)} />
       </View>
-
-      <BottomMenu onMenuPress={() => setMenuVisible(!menuVisible)} />
+    
+      <BottomMenu onMenuPress={() => setMenuVisible(!menuVisible)} /> 
     </SafeAreaView>
   );
 }

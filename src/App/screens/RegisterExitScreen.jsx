@@ -16,6 +16,9 @@ export default function RegisterExitScreen() {
       <Header />
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
+        <TouchableOpacity style={styles.backButton}>
+          <Ionicons name="arrow-back" size={26} color="#000000" />
+        </TouchableOpacity>
         <Text style={styles.title}>Registrar saída</Text>
 
         <View style={styles.card}>
@@ -34,14 +37,14 @@ export default function RegisterExitScreen() {
             <View style={styles.flex}>
               <Button
                 textButton="Limpar"
-                backgroundColor="#B83232"
+                backgroundColor="#FF0000"
                 textColor="#FFFFFF"
               />
             </View>
             <View style={styles.flex}>
               <Button
                 textButton="Registrar"
-                backgroundColor="#5BC0DE"
+                backgroundColor="#3CA7FF"
                 textColor="#FFFFFF"
               />
             </View>
@@ -99,5 +102,10 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginHorizontal: 15,
     gap: 10,
+  },
+  backButton: {
+    marginTop: 10,
+    marginLeft: 15,
+    padding: 5,
   },
 });

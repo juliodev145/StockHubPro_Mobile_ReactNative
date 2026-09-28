@@ -20,7 +20,7 @@ export default function LabeledInput({ placeholder, icon, isPassword }) {
           style={styles.input}
           placeholderTextColor="#858585"
           placeholder={placeholder}
-          secureTextEntry={isPassword && hidden}
+          secureTextEntry={isPassword && hidden}  //para deixar a senha oculta
         />
 
         {isPassword && (

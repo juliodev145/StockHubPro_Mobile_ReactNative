@@ -1,92 +1,82 @@
-import { StyleSheet,Text,View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import Header from "../components/Header";
 import LabeledInput from "../components/LabeledInput";
 import Button from "../components/Button";
-const TEXT_COLOR = "#0045C4"
-export default function ResetPasswScreen () {
-   return (
-    <View style={styles.container} >
-    <View style={styles.content}>
+const TEXT_COLOR = "#0045C4";
+export default function ResetPasswScreen() {
+  return (
+    <View style={styles.container}>
 
-          <Header/>
-        
-                        {/**iCONE  */}
+      <View style={styles.content}>
+        <Header />
 
-    <View>
-            <Text style={styles.title}>
-               Redefinição de Senha
+        {/**iCONE  */}
 
-            </Text>
+        <View>
+          <Text style={styles.title}>Redefinição de Senha</Text>
 
-            <Text style={styles.title}>
-                Acabamos de enviar um código para seu e-mail
+          <Text style={styles.subtitle1}>
+            Acabamos de enviar um código para seu e-mail
+          </Text>
 
-            </Text>
+          <Text style={styles.subtitle2}>
+            Caso não encontre o e-mail na sua caixa de entrada verifique sua
+            caixa de spam.
+          </Text>
+        </View>
 
-            <Text style={styles.title}>
-                Caso não encontre o e-mail na sua caixa de entrada verifique sua caixa de spam.
+        <LabeledInput placeholder="Insira seu código " />
 
-            </Text>
-             
+        <LabeledInput placeholder="Insira a nova senha" isPassword />
+
+        <LabeledInput placeholder="Repita a nova senha" isPassword />
+
+        <Button textButton="Redefinir" />
+        <Button
+          textButton="Fazer login"
+          backgroundColor="#FFFFFF"
+          textColor="#0045C4"
+          borderColor="#0045C4"
+          borderWidth={1}
+        />
+      </View>
     </View>
-
-             <LabeledInput
-               placeholder= "Insira seu código "
-              />
-
-              <LabeledInput
-               placeholder= "Insira seu e-mail"
-              />
-
-              <LabeledInput
-               placeholder= "Repita seu e-mail"
-              />
-
-                <Button
-                 textButton="Redefinir"
-                              />
-               <Button
-               textButton="Fazer login"
-               backgroundColor="#FFFFFF"
-               textColor="#0045C4"
-               borderColor="#0045C4"
-                borderWidth={1}
-              />
-
-              
-    </View>
-
-     
-
-    </View>
-
-   );
+  );
 }
 
-  const styles = StyleSheet.create({
-    title:{
-    color:TEXT_COLOR,
-    fontSize:20,
+const styles = StyleSheet.create({
+  title: {
+    color: TEXT_COLOR,
+    fontSize: 20,
     textAlign: "center",
-    margin:15,
-    },
+    margin: 15,
+  },
 
-    subtitle:{
-    fontSize:16,
-    textAlign:"center",
-    marginBotton:15,
-
-    },
-    container: {
-        flex: 1,
-    },
-    content: {
-        flex: 1,
-    },
-    title: {
-        color: "#0045C4",
-        fontSize: 20,
-        textAlign: "center",
-        margin: 15,
-    },
+  subtitle: {
+    fontSize: 16,
+    textAlign: "center",
+    marginBotton: 15,
+  },
+  container: {
+    flex: 1,
+  },
+  content: {
+    flex: 1,
+  },
+  title: {
+    color: "#0045C4",
+    fontSize: 20,
+    textAlign: "center",
+    margin: 15,
+  },
+  subtitle1: {
+    fontSize: 16,
+    fontWeight: "600",
+    textAlign: "center",
+  },
+  subtitle2: {
+    fontSize: 16,
+    textAlign: "center",
+    margin: 15,
+  },
 });

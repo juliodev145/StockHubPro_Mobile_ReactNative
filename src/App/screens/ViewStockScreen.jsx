@@ -139,10 +139,10 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   editButton: {
-    backgroundColor: "#E6E03A",
+    backgroundColor: "#FFEA00",
   },
   deleteButton: {
-    backgroundColor: "#D64545",
+    backgroundColor: "#FF0000",
   },
   editText: {
     color: "#000000",
