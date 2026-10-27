@@ -5,18 +5,21 @@ import Header from "../components/Header";
 import LabeledInput from "../components/LabeledInput";
 import Button from "../components/Button";
 import BottomMenu from "../components/BottomMenu";
+//import { useNavigation } from "@react-navigation/native";
 
 const TEXT_COLOR = "#0045C4";
 
 export default function RegisterItemScreen() {
+ // const navigation = useNavigation();
   return (
+    
     <SafeAreaView style={styles.container} edges={["top"]}>
       <StatusBar barStyle="light-content" backgroundColor={TEXT_COLOR} />
 
       <Header />
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
-        <TouchableOpacity style={styles.backButton}>
+        <TouchableOpacity style={styles.backButton} onPress={ () => navigation.goBack()}>
           <Ionicons name="arrow-back" size={26} color="#000000" />
         </TouchableOpacity>
         <Text style={styles.title}>Cadastrar item</Text>
@@ -28,7 +31,7 @@ export default function RegisterItemScreen() {
             <View style={styles.flex}>
               <LabeledInput placeholder="Código do produto" />
             </View>
-            <TouchableOpacity style={styles.scanButton}>  {/**TouchableOpacity - "area clicavel" */}
+            <TouchableOpacity style={styles.scanButton}>  
               <Ionicons name="barcode-outline" size={24} color="#000000" />
             </TouchableOpacity>
           </View>

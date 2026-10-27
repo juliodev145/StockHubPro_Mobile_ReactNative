@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import Header from "../components/Header";
 import LabeledInput from "../components/LabeledInput";
 import Button from "../components/Button";
+import { Ionicons } from "@expo/vector-icons";
 const TEXT_COLOR = "#0045C4";
 export default function ResetPasswScreen() {
   return (
@@ -10,7 +11,7 @@ export default function ResetPasswScreen() {
       <View style={styles.content}>
         <Header />
 
-        {/**iCONE  */}
+        {/**Botão de voltar */}
 
         <View>
           <Text style={styles.title}>Redefinição de Senha</Text>
